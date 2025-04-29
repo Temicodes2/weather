@@ -1,0 +1,23 @@
+<body>
+    <h1>
+        Weather Stats
+    </h1>
+    <form method="POST">
+        <label >Enter coordinates for location:</label>
+        <input placeholder="lat" name="lat">
+        <input placeholder="lon" name="lon">
+        <input type="submit">
+    </form>
+    <center>
+        <table>
+            <tr><td colspan="2"><img src="{{ weather.data.condition.icon }}"></td></tr>
+            <tr><td>Place</td><td>{{ weather.data.name}}</td></tr>
+            <tr><td>Region</td><td>{{ weather.data.region}}</td></tr>
+            <tr><td>Country</td><td>{{ weather.data.country}}</td></tr>
+            <tr><td>Condition</td><td>{{ weather.data.condition.text}}</td></tr>
+            <tr><td>Temp</td><td>{{ weather.data.temp_c}}</td></tr>
+        </table>
+    </center>
+    {% endif %}
+    <p>you have {{ count }} people </p>
+</body>
